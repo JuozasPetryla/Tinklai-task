@@ -24,8 +24,6 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       TZ: Europe/Vilnius
-    ports:
-      - "33060:3306"
     volumes:
       - dbdata:/var/lib/mysql
       - ./db/init.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
